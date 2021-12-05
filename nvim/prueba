@@ -1,0 +1,8 @@
+Copiando y pegando en terminal
+El método más simple es utilizar los comandos de copiar y pegar soportados por nuestra terminal, como Vim corre dentro de la misma, debería funcionar. El único problema que tiene es que si nos gusta activar el modo visual con el mouse en Vim, no vamos a poder seleccionar texto «por fuera de vim».
+
+Por ejemplo, podríamos editar un archivo de texto, seleccionar un fragmento, y presionar Ctrl+Shift+c para copiar al portapapeles, o Ctrl+Shift+v para pegar desde el portapapeles del sistema.
+
+Estos comandos no son propios de Vim, sino del emulador de terminal, por lo que podríamos seleccionar el texto, luego clic derecho en la terminal (o con el menú contextual) y copiar o pegar según corresponda.
+
+Un inconveniente (además del del modo visual, que yo uso mucho) es que si tenemos la numeración de línea habilitada en el Vim, al copiar fragmentos de texto también va a copiar los números de línea, porque es parte del texto de la terminal (recordemos que esta selección no selecciona (valga la redundancia) texto dentro de vim, sino lo que se ve en el emulador de terminal.
