@@ -10,12 +10,17 @@ let mapleader = ","
 
 " General
 nmap <Space>w :w<Enter>
+nmap <Space>W :w!<Enter>
 nmap <Space>q :q<Enter>
 nmap <Space>Q :q!<Enter>
 " nmap <Space>tt :terminal<Enter>
+nmap <space>tv <Esc>:rightbelow sfind term://zsh<Enter>
+nmap <space>th <Esc>:vertical rightbelow sfind term://zsh<Enter>
 
 " Acceso rapido a teclas
 imap ii <Esc>
+vmap ii <Esc>
+cmap ii <Esc>
 imap <Leader>- <
 imap <Leader>+ >
 

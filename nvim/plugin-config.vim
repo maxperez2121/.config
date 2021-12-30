@@ -34,11 +34,8 @@ nmap <Space>nf :NERDTreeFind<CR>
 "===================================================================================
 " Abrir en un buffer
 nmap <Space>ff :Vifm<Enter>
-imap <Space>ff <Esc>:Vifm<Enter>
-vmap <Space>ff <Esc>:Vifm<Enter>
 " Abrir verticalmente
 nmap <Space>fv :SplitVifm<Enter>
-
 " Abrir horizontalmente
 nmap <Space>fo :VsplitVifm<Enter>
 
@@ -67,8 +64,15 @@ let g:coc_global_extensions = [
     \ 'coc-html-css-support',
     \ 'coc-java',
     \ 'coc-json',
-    \ 'coc-sql'
+    \ 'coc-sql',
+    \ 'coc-snippets',
     \   ]
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Con-Snippets
+imap <C-l> <Plug>(coc-snippets-expand)
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
 
 "===================================================================================
 "                               nvim-Colorizer
@@ -78,6 +82,6 @@ let g:coc_global_extensions = [
 "===================================================================================
 "                               vim-floaterm
 "===================================================================================
-nmap <space>tt :FloatermNew --height=0.8 --width=0.8 --wintype=float<Enter>
+nmap <space>tt <Esc>:FloatermNew --height=0.8 --width=0.8 --wintype=float<Enter>
 imap <space>tt <Esc>:FloatermNew --height=0.8 --width=0.8 --wintype=float<Enter>
 vmap <space>tt <Esc>:FloatermNew --height=0.8 --width=0.8 --wintype=float<Enter>

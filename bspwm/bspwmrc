@@ -19,13 +19,17 @@ nitrogen --restore &
 # Manejar transparencias con picom
 /usr/local/bin/src/picom -f &
 
+# fix for some Java apps
+# Arregla algunas apps de java (como netbeans)
+wmname LG3D &
+
 # Crear el numero de escritorios o areas de trabajo (I II ...)
 # bspc monitor -d I II III IV V VI VII VIII IX X
 if xrandr -q | grep 'DP-1 connected'; then
     xrandr  --output eDP-1 --mode 1366x768 --output DP-1 --mode 1360x768
     --right-of eDP-1
-    bspc monitor eDP-1 -d I II III IV V
-    bspc monitor DP-1 -d VI VII VII IX X
+    bspc monitor eDP-1 -d I II III IV V VI VII VIII IX
+    bspc monitor DP-1 -d X
 else
     bspc monitor -d I II III IV V VI VII VIII IX X
 fi
