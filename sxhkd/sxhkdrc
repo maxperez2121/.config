@@ -1,6 +1,15 @@
 #==============================================================================
 #								Atajos independientes
 #==============================================================================
+
+# Ver ayuda
+super + shift + a
+	~/scripts/sxhkd-help.sh
+
+# Cambiar la distribucion del teclado
+ctrl + shift + @space
+	setxkbmap {us,latam}
+
 # Abrir terminator (terminal emulator)
 alt + t
 	terminator
@@ -16,6 +25,18 @@ super + shift + p
 # Reiniciar el archivo de configuracion de sxhkd
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# Abrir administrador de archivos
+super + e
+	thunar
+
+# Abrir Gimp
+alt + v
+	gimp
+
+# Abrir Scratchpad
+alt + z
+	bspc node -g {hidden=off,hidden=on} scratchpad
 
 #==============================================================================
 #								Atajos bspwn

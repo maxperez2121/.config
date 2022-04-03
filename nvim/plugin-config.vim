@@ -67,8 +67,8 @@ let g:coc_global_extensions = [
     \ 'coc-sql',
     \ 'coc-snippets',
     \   ]
-"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Con-Snippets
 imap <C-l> <Plug>(coc-snippets-expand)
 let g:coc_snippet_next = '<c-j>'

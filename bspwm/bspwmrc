@@ -26,14 +26,22 @@ wmname LG3D &
 # Crear el numero de escritorios o areas de trabajo (I II ...)
 # bspc monitor -d I II III IV V VI VII VIII IX X
 if xrandr -q | grep 'DP-1 connected'; then
-    xrandr  --output eDP-1 --mode 1366x768 --output DP-1 --mode 1360x768
-    --right-of eDP-1
+
+    # Cargar el monitor principal(eDP-1)
+    xrandr --output eDP-1 --mode 1366x768
     bspc monitor eDP-1 -d I II III IV V VI VII VIII IX
+
+    # Carga el segundo monitor(DP-1) a la derecha del primer monitor(eDP-1)
+    # Para ver los monitores: xrandr -q
+    xrandr --output DP-1 --mode 1360x768 --right-of eDP-1
     bspc monitor DP-1 -d X
+
+    #xrandr  --output eDP-1 --mode 1366x768 --output DP-1 --mode 1360x768 --right-of eDP-1
 else
+    # Cargar el monitor principal(eDP-1)
+    xrandr --output eDP-1 --mode 1366x768
     bspc monitor -d I II III IV V VI VII VIII IX X
 fi
-# xrandr --output eDP-1 --mode 1366x768
 
 bspc config border_width         3                          # Ancho del borde
 bspc config window_gap          12
@@ -47,3 +55,6 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a scratchpad sticky=on state=floating #hidden=on
+#st -c scratchpad &
+#bspc rule -a scratchterm sticky=on state=floating hidden=on

@@ -21,8 +21,8 @@ nmap <space>th <Esc>:vertical rightbelow sfind term://zsh<Enter>
 imap ii <Esc>
 vmap ii <Esc>
 cmap ii <Esc>
-imap <Leader>- <
-imap <Leader>+ >
+" imap <Leader>- <
+" imap <Leader>+ >
 
 " Ejecutar un comando escrito como texto
 map <Leader>cmd !!$SHELL<Enter>
@@ -48,8 +48,8 @@ nmap <Space>h :bprev<Enter>
 nmap <Space>l :bnext<Enter>
 nmap <Space>bn :new<Enter>
 nmap <Space>bd :bd<Enter>
-nnoremap <Space>- 10<C-w>>
-nnoremap <Space>+ 10<C-w><
+nnoremap <Space>- 10<C-w><
+nnoremap <Space>+ 10<C-w>>
 
 " Pestañas (Tabs)
 nmap <Space>tp :tabprevious<Enter>
