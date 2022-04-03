@@ -15,4 +15,4 @@ configuration {
 }
 
 /*@theme "~/.config/rofi/material-ocean.rasi"*/
-@theme "~/.config/rofi/gruvbox/gruvbox-dark.rasi"
+@theme "~/.config/rofi/Theme/gruvbox/gruvbox-dark.rasi"
